@@ -1,0 +1,478 @@
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+:root {
+
+    font-family:
+        Inter,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    color: #182230;
+
+    background: #f5f7fb;
+
+}
+
+
+* {
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    margin: 0;
+
+    min-height: 100vh;
+
+    background:
+        #f5f7fb;
+
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+
+    background:
+        linear-gradient(
+            135deg,
+            #4338ca,
+            #7c3aed
+        );
+
+    color: white;
+
+    padding:
+        56px
+        20px
+        72px;
+
+}
+
+
+.hero-inner {
+
+    max-width: 920px;
+
+    margin:
+        0
+        auto;
+
+}
+
+
+.brand {
+
+    font-size: 20px;
+
+    font-weight: 800;
+
+    margin-bottom: 24px;
+
+}
+
+
+.hero h1 {
+
+    font-size:
+        clamp(
+            34px,
+            6vw,
+            60px
+        );
+
+    margin:
+        0
+        0
+        14px;
+
+    line-height: 1.05;
+
+}
+
+
+.hero p {
+
+    font-size: 18px;
+
+    max-width: 700px;
+
+    line-height: 1.6;
+
+    opacity: 0.95;
+
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+========================================================= */
+
+.container {
+
+    max-width: 920px;
+
+    margin:
+        -32px
+        auto
+        60px;
+
+    padding:
+        0
+        18px;
+
+}
+
+
+/* =========================================================
+   CARDS
+========================================================= */
+
+.card {
+
+    background: white;
+
+    border-radius: 20px;
+
+    padding: 26px;
+
+    margin-bottom: 20px;
+
+    box-shadow:
+        0 12px 40px
+        rgba(
+            20,
+            30,
+            60,
+            0.09
+        );
+
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+label {
+
+    display: block;
+
+    font-weight: 700;
+
+    margin:
+        12px
+        0
+        8px;
+
+}
+
+
+select,
+textarea {
+
+    width: 100%;
+
+    border:
+        1px solid
+        #d9deea;
+
+    border-radius: 12px;
+
+    padding:
+        13px
+        14px;
+
+    font: inherit;
+
+    outline: none;
+
+    background: white;
+
+}
+
+
+textarea {
+
+    resize: vertical;
+
+    min-height: 180px;
+
+}
+
+
+select:focus,
+textarea:focus {
+
+    border-color:
+        #6366f1;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(
+            99,
+            102,
+            241,
+            0.12
+        );
+
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+button {
+
+    border: 0;
+
+    border-radius: 12px;
+
+    padding:
+        13px
+        20px;
+
+    font: inherit;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    background:
+        #4f46e5;
+
+    color: white;
+
+    margin-top: 16px;
+
+    transition:
+        transform 0.15s ease,
+        filter 0.15s ease;
+
+}
+
+
+button:hover {
+
+    filter:
+        brightness(0.96);
+
+    transform:
+        translateY(-1px);
+
+}
+
+
+button:disabled {
+
+    opacity: 0.6;
+
+    cursor: wait;
+
+    transform: none;
+
+}
+
+
+button.secondary {
+
+    background:
+        #eef0ff;
+
+    color:
+        #4338ca;
+
+    margin: 0;
+
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.status {
+
+    margin-top: 14px;
+
+    color:
+        #5d6675;
+
+    min-height: 22px;
+
+}
+
+
+/* =========================================================
+   RESULT
+========================================================= */
+
+.result-card {
+
+    overflow: hidden;
+
+}
+
+
+.result-card.hidden {
+
+    display: none;
+
+}
+
+
+.result-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content:
+        space-between;
+
+    gap: 12px;
+
+    margin-bottom: 18px;
+
+}
+
+
+.result-header h2 {
+
+    margin: 0;
+
+}
+
+
+.answer {
+
+    line-height: 1.75;
+
+    word-wrap: break-word;
+
+}
+
+
+/* =========================================================
+   QUIZ
+========================================================= */
+
+.quiz-question {
+
+    padding: 18px;
+
+    border:
+        1px solid
+        #e5e7eb;
+
+    border-radius: 14px;
+
+    margin:
+        14px
+        0;
+
+}
+
+
+.quiz-question h3 {
+
+    margin-top: 0;
+
+    line-height: 1.5;
+
+}
+
+
+.quiz-question li {
+
+    padding:
+        5px
+        0;
+
+}
+
+
+details {
+
+    margin-top: 14px;
+
+    background:
+        #f8f9fc;
+
+    padding: 12px;
+
+    border-radius: 10px;
+
+}
+
+
+summary {
+
+    cursor: pointer;
+
+    font-weight: 700;
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (
+    max-width: 640px
+) {
+
+    .hero {
+
+        padding:
+            38px
+            18px
+            58px;
+
+    }
+
+
+    .card {
+
+        padding: 19px;
+
+        border-radius: 16px;
+
+    }
+
+
+    .result-header {
+
+        align-items:
+            flex-start;
+
+    }
+
+
+    .hero p {
+
+        font-size: 16px;
+
+    }
+
+}
